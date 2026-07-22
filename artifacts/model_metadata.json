@@ -1,0 +1,25 @@
+{
+  "best_model": "gradient_boosting",
+  "model_version": "1.0",
+  "decision_threshold": 0.5,
+  "training_rows": 10000,
+  "positive_rows": 2037,
+  "negative_rows": 7963,
+  "validation": "3-fold stratified cross-validation",
+  "selection_metric": "average_precision",
+  "best_model_metrics": {
+    "model": "gradient_boosting",
+    "cv_average_precision_mean": 0.5837671605907825,
+    "cv_average_precision_std": 0.01942119513894369,
+    "cv_roc_auc_mean": 0.8001065086190167
+  },
+  "holdout_metrics": {
+    "accuracy": 0.836,
+    "precision": 0.7182320441988951,
+    "recall": 0.3194103194103194,
+    "f1": 0.4421768707482993,
+    "roc_auc": 0.8100735558362677,
+    "average_precision": 0.5870904996398868
+  },
+  "source_dataset": "Kaggle: Churn Modelling (bank customer churn), 6-feature subset"
+}

@@ -1,0 +1,37 @@
+{
+  "feature_columns": [
+    "CreditScore",
+    "Geography",
+    "Gender",
+    "Age",
+    "Balance",
+    "IsActiveMember"
+  ],
+  "numeric_columns": [
+    "CreditScore",
+    "Age",
+    "Balance",
+    "IsActiveMember"
+  ],
+  "categorical_columns": [
+    "Geography",
+    "Gender"
+  ],
+  "categorical_values_seen": {
+    "Geography": [
+      "France",
+      "Germany",
+      "Spain"
+    ],
+    "Gender": [
+      "Female",
+      "Male"
+    ]
+  },
+  "target_column": "Exited",
+  "excluded_identifier_columns": [
+    "RowNumber",
+    "CustomerId",
+    "Surname"
+  ]
+}
