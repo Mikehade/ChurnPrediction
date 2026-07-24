@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title("🏦 Bank Churn Prediction Dashboard Updated to Reflect CI Pipeline V2")
+st.title("🏦 Bank Churn Prediction Dashboard Updated to Reflect CI Pipeline V3 to verify it works")
 
 st.markdown(
     """
