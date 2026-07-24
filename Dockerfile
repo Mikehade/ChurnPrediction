@@ -7,6 +7,7 @@ WORKDIR /app
 
 # Install build tools if needed by Python packages
 RUN apt-get update && \
+    apt-get install -y supervisor && \
     apt-get install -y --no-install-recommends build-essential && \
     rm -rf /var/lib/apt/lists/*
 
@@ -17,6 +18,9 @@ RUN pip install --no-cache-dir --upgrade pip && \
 
 COPY . .
 
-EXPOSE 8000
+COPY .deploy-services/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+EXPOSE 8000 8501 9001
+
+# CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+CMD ["python", "main.py"]

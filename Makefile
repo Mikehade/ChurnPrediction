@@ -12,6 +12,8 @@ run:
 	docker run -d \
 		--name $(CONTAINER_NAME) \
 		-p $(PORT):8000 \
+		-p 9001:9001 \
+		-p 8501:8501 \
 		$(IMAGE_NAME)
 
 start: build run
